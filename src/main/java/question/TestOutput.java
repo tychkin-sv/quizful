@@ -12,8 +12,20 @@ public class TestOutput {
         PrintStream console = System.out; 
         System.setOut(console); 
  
-        System.out.println("FIRST OUTPUT"); 
- 
+        System.out.println("FIRST OUTPUT");
+        int k=2;
+        System.out.println(k>>3<<k == k>>1<<k);
+
+        Integer i1 = 10;
+        Integer i2 = 10;
+
+        Double d1 = 10d;
+        Double d2 = 10d;
+
+        System.out.println(i1 == i2);
+        System.out.println(d1 == d2);
+
+
         System.setOut(out); 
  
         System.out.println("SECOND OUTPUT"); 
@@ -22,6 +34,7 @@ public class TestOutput {
  
         System.out.println("THIRD OUTPUT");
         new Object();
+
     } 
 }
 
@@ -45,6 +58,22 @@ public class TestOutput {
 
 //Можно ли динамически менять размер массива?
 //Нет, нельзя
+
+//Может ли класс быть объявлен с модификатором transient?
+//Нет
+//Пояснение: Только поля класса могут быть объявлены как transient. Это ключевое слово говорит о том, что значение поля не нужно сохранять при сериализации.
+
+//Выберите модификаторы, применимые к полям класса:
+//volatile
+//static
+//Пояснение: К полям класса применимы модификаторы public, protected, private, static, final, transient, volatile.
+
+
+//Можно ли при объявлении класса использовать модификаторы abstract и final одновременно?
+//Нет
+//Пояснение: Эти два модификатора являются взаимоисключающими:
+//– abstract используется, чтобы показать, что класс имеет неполную реализацию, или его следует рассматривать таковым;
+//– final применяется к полностью реализованным классам, для которых не нужны (нежелательны) подклассы, чтобы обеспечить надёжность и/или производительность.
 
 //System.out.println( 0.3 == 0.1d + 0.1d + 0.1d );
 //false
